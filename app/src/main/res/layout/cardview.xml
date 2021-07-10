@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:TextView="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingBottom="5dp">
+
+    <TextView
+        android:id="@+id/lbl_MTG_Search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:fontFamily="cursive"
+        android:text="MTG Card View"
+        android:textSize="30sp"
+        android:layout_below="@android:id/title" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/lbl_MTG_Search"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@id/imageView"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/lbl_cardInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/divider" />
+
+    <TextView
+        android:id="@+id/lblQTY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_cardInfo"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="7dp"
+        android:gravity="bottom"
+        android:layout_alignBottom="@id/txtQTY"
+        android:text="Quantity:" />
+
+    <EditText
+        android:id="@+id/txtQTY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lbl_cardInfo"
+        android:layout_toRightOf="@+id/lblQTY"
+        android:layout_toLeftOf="@id/btnAdd"
+        android:layout_margin="5dp"
+        android:inputType="number" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnAdd"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignTop="@id/txtQTY"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="-10dp"
+        android:layout_marginRight="5dp"
+        android:clickable="true"
+        android:maxWidth="55dp"
+        app:srcCompat="@android:drawable/ic_input_add" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"
+        android:visibility="invisible"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
+
+
+
+</RelativeLayout>

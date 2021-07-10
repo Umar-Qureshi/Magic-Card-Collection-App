@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/cardView"
+    android:layout_height="100dp"
+    android:layout_marginTop="12dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    card_view:cardCornerRadius="8dp"
+    card_view:contentPadding="10dp"
+    card_view:cardBackgroundColor="#FFFF"
+    android:foreground="?selectableItemBackground"
+    android:clickable="true">
+    <RelativeLayout
+        android:id="@+id/rlContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/cardTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:textSize="25dp"
+            android:text="Title" />
+        <TextView
+            android:id="@+id/cardSet"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="Set Name"
+            android:textSize="12dp"
+            android:layout_below="@+id/cardTitle"/>
+        <TextView
+            android:id="@+id/cardPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="Value"
+            android:layout_marginRight="20dp"
+            android:layout_alignTop="@+id/cardSet"
+            android:layout_toLeftOf="@id/cardQty"/>
+        <TextView
+            android:id="@+id/cardQty"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:textAlignment="center"
+            android:textSize="40dp"
+            android:text="#"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

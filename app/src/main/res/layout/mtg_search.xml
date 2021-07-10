@@ -1,0 +1,74 @@
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/lbl_MTG_Search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7dp"
+        android:layout_below="@android:id/title"
+        android:fontFamily="cursive"
+        android:text="MTG Search"
+        android:textColor="#3b3b3b"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/lblSearchPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Search card"
+        android:layout_below="@id/lbl_MTG_Search"
+        android:textColor="#000000" />
+
+    <EditText
+        android:id="@+id/txtSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:hint="Type Card Name"
+        android:layout_below="@id/lblSearchPrompt"
+        android:inputType="text"
+        android:textColor="#000000"
+        android:backgroundTint="#FFFFFF"/>
+
+    <Button
+        android:id="@+id/btnMTG_Search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/txtSearch"
+        android:onClick="MTG_Search"
+        android:text="Search MTG Card" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnHomeView"
+        android:layout_below="@id/btnMTG_Search">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ListView
+                android:id="@+id/ListViewMTG"
+                android:layout_width="match_parent"
+                android:textColor="#FFFFFF"
+                android:layout_height="400dp">
+            </ListView>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnHomeView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="Home_View"
+        android:text="Home View" />
+</RelativeLayout>
