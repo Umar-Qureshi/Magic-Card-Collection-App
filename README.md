@@ -57,3 +57,4 @@ Getting the image to display was difficult, we tried many different snippets of 
 
 Some complications are faced by actions being inputted too quickly by the user. The database interactions can be a little slow to take effect and cause adverse effects (with some crashes) unless given a delay. These could be resolved with disabling UI elements until the completion of the individual transactions. There was not quite enough time to make the process seamlessly operational with our level of experience.
 
+
